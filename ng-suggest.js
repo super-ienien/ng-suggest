@@ -214,7 +214,7 @@ angular.module('ngSuggest').directive('suggestTypeahead',[
                     throw new Error("ui.bootstrap.typehead directive required!");
                 }
 
-                var expr = "item.label for item in "+suggestFunction+"($viewValue) | filter:$viewValue";
+                var expr = "item.label for item in "+suggestFunction+"($viewValue)";
                 attrs.$set('typeahead',expr);
                 
                 var directive = $injector.get("typeaheadDirective")[0];
